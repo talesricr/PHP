@@ -12,6 +12,9 @@ require_once __DIR__ . '/../../Searches/LinearSearch.php';
 require_once __DIR__ . '/../../Searches/LowerBound.php';
 require_once __DIR__ . '/../../Searches/UpperBound.php';
 require_once __DIR__ . '/../../Searches/JumpSearch.php';
+require_once __DIR__ . '/../../Searches/ExponentialSearch.php';
+require_once __DIR__ . '/../../Searches/TernarySearch.php';
+require_once __DIR__ . '/../../Searches/InterpolationSearch.php';
 
 
 class SearchesTest extends TestCase
@@ -143,5 +146,63 @@ class SearchesTest extends TestCase
         $result = jumpSearch($list, $target);
         assertEquals(6, $result);
     }
-    
+
+    public function testExponentialSearch()
+    {
+        $list = array(2,3,4,7,28,35,63,98);
+        $target = 35;
+        $result = exponentialSearch($list, $target);
+        assertEquals(5, $result);
+    }
+
+    public function testTernarySearchIterative()
+    {
+        $list = [0, 5, 7, 10, 15];
+        $target = 0;
+        $result = ternarySearchIterative($list, $target);
+        assertEquals(0, $result);
+        $target = 15;
+        $result = ternarySearchIterative($list, $target);
+        assertEquals(4, $result);
+        $target = 5;
+        $result = ternarySearchIterative($list, $target);
+        assertEquals(1, $result);
+        $target = 6;
+        $result = ternarySearchIterative($list, $target);
+        assertEquals(null, $result);
+    }
+
+    public function testTernarySearchByRecursion()
+    {
+        $list = [0, 5, 7, 10, 15];
+        $target = 0;
+        $result = ternarySearchByRecursion($list, $target, 0, 4);
+        assertEquals(0, $result);
+        $target = 15;
+        $result = ternarySearchByRecursion($list, $target, 0, 4);
+        assertEquals(4, $result);
+        $target = 5;
+        $result = ternarySearchByRecursion($list, $target, 0, 4);
+        assertEquals(1, $result);
+        $target = 6;
+        $result = ternarySearchByRecursion($list, $target, 0, 4);
+        assertEquals(null, $result);
+    }
+
+    public function testInterpolationSearch()
+    {
+        $list = [2, 6, 8, 10, 12, 14, 16, 18, 20, 22, 26, 34, 39];
+        $target = 20;
+        $result = interpolationSearch($list, $target);
+        assertEquals(8, $result);
+        $target = 12;
+        $result = interpolationSearch($list, $target);
+        assertEquals(4, $result);
+        $target = 1000;
+        $result = interpolationSearch($list, $target);
+        assertEquals(null, $result);
+        $target = 39;
+        $result = interpolationSearch($list, $target);
+        assertEquals(12, $result);
+    }
 }

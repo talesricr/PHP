@@ -11,6 +11,11 @@
   * [Decimaltobinary](./Conversions/DecimalToBinary.php)
   * [Hexadecimaltodecimal](./Conversions/HexadecimalToDecimal.php)
   * [Octaltodecimal](./Conversions/OctalToDecimal.php)
+  * [Speedconversion](./Conversions/SpeedConversion.php)
+
+## Graphs
+  * [Breadthfirstsearch](./Graphs/BreadthFirstSearch.php)
+  * [Depthfirstsearch](./Graphs/DepthFirstSearch.php)
 
 ## Maths
   * [Absolutemax](./Maths/AbsoluteMax.php)
@@ -22,6 +27,9 @@
   * [Fastexponentiation](./Maths/FastExponentiation.php)
   * [Fibonacci](./Maths/Fibonacci.php)
   * [Fibonacci2](./Maths/Fibonacci2.php)
+  * [Mean](./Maths/Mean.php)
+  * [Median](./Maths/Median.php)
+  * [Mode](./Maths/Mode.php)
   * [Neonnumber](./Maths/NeonNumber.php)
   * [Perfectsquare](./Maths/PerfectSquare.php)
   * [Mean](./Maths/Mean.php)
@@ -38,10 +46,13 @@
 
 ## Searches
   * [Binarysearch](./Searches/BinarySearch.php)
+  * [Exponentialsearch](./Searches/ExponentialSearch.php)
   * [Fibonaccisearch](./Searches/FibonacciSearch.php)
+  * [Interpolationsearch](./Searches/InterpolationSearch.php)
   * [Jumpsearch](./Searches/JumpSearch.php)
   * [Linearsearch](./Searches/LinearSearch.php)
   * [Lowerbound](./Searches/LowerBound.php)
+  * [Ternarysearch](./Searches/TernarySearch.php)
   * [Upperbound](./Searches/UpperBound.php)
 
 ## Sorting
@@ -75,6 +86,9 @@
     * [Morsecodetest](./tests/Ciphers/MorseCodeTest.php)
   * Conversions
     * [Conversionstest](./tests/Conversions/ConversionsTest.php)
+  * Graphs
+    * [Breadthfirstsearchtest](./tests/Graphs/BreadthFirstSearchTest.php)
+    * [Depthfirstsearchtest](./tests/Graphs/DepthFirstSearchTest.php)
   * Maths
     * [Mathstest](./tests/Maths/MathsTest.php)
     * [Projecteulertest](./tests/Maths/ProjectEulerTest.php)
